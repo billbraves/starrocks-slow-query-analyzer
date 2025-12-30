@@ -1,0 +1,37 @@
+# StarRocks 慢 SQL 分析系统配置
+
+# 数据库连接配置
+database:
+  host: "127.0.0.1"
+  port: 9030
+  user: "root"
+  password: ""
+  database: "information_schema"
+
+# 慢 SQL 阈值配置（单位：秒）
+slow_query_threshold: 1.0
+very_slow_query_threshold: 5.0
+critical_query_threshold: 10.0
+
+# 分析时间范围（小时）
+analysis_time_range: 24
+
+# 排除模式（不分析的 SQL 模式）
+exclude_patterns:
+  - "SHOW%"
+  - "SELECT 1"
+  - "SELECT @@%"
+  - "SET NAMES%"
+
+# 输出配置
+output:
+  report_dir: "./reports"
+  report_format: "html"  # html, markdown, json
+  include_query_plans: true
+
+# 优化建议配置
+optimization:
+  max_table_scan_rows: 10000000
+  max_scan_bytes: 1073741824  # 1GB
+  suggest_indexes: true
+
