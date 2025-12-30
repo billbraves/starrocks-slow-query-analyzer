@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # StarRocks 慢 SQL 分析系统
 
 ## 🎯 项目简介
@@ -282,3 +283,7 @@ MIT License
 
 感谢 StarRocks 社区和 Claude Code 团队提供的优秀工具。
 
+=======
+# starrocks-slow-query-analyzer
+StarRocks 慢 SQL 分析工具
+>>>>>>> 42918893246ace5bdb8babd987c03ae7a9ec4997
